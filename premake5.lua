@@ -24,6 +24,11 @@ project "imgui"
 		"backends/imgui_impl_vulkan.cpp"
 	}
 
+	includedirs
+  {
+		"."
+  }
+
 	filter "system:windows"
 		systemversion "latest"
 	
