@@ -1,3 +1,5 @@
+VULKAN_SDK = os.getenv("VULKAN_SDK")
+
 project "imgui"
 	kind "StaticLib"
 	language "C++"
@@ -26,7 +28,18 @@ project "imgui"
 
 	includedirs
   {
-		"."
+		".",
+		"%{VULKAN_SDK}/Include",
+  }
+
+	links
+  {
+    "vulkan-1.lib"
+  }
+
+  libdirs
+  {
+    "%{VULKAN_SDK}/Lib"
   }
 
 	filter "system:windows"
