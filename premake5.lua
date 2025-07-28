@@ -23,7 +23,9 @@ project "imgui"
 		"imstb_truetype.h",
 		"imgui_demo.cpp",
 		"backends/imgui_impl_vulkan.h",
-		"backends/imgui_impl_vulkan.cpp"
+		"backends/imgui_impl_vulkan.cpp",
+		"backends/imgui_impl_glfw.h",
+		"backends/imgui_impl_glfw.cpp"
 	}
 
 	includedirs
